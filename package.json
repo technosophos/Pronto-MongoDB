@@ -2,7 +2,7 @@
   "name": "pronto-mongodb",
   "description": "MongoDB Support for Pronto",
   "keywords": ["mongodb","mongo","pronto"],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Matt Butcher <technosophos@gmail.com>",
   "contributors": [
     {"name": "Matt Butcher", "email": "technosophos@gmail.com"}
