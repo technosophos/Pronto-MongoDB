@@ -8,9 +8,11 @@
     {"name": "Matt Butcher", "email": "technosophos@gmail.com"}
   ],
   "dependencies": {
-    "pronto": ">= 0.1.0",
     "mongodb": ">= 0.9.6"
   },
+  "devDependencies": {
+    "pronto": ">= 0.1.0"
+  }
   "main": "lib/pronto-mongodb",
   "scripts": {
     "test": "make test"
