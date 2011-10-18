@@ -1,6 +1,6 @@
 # Pronto-MongoDB: MongoDB drivers for Pronto.js
 
-[Pronto.js]() is a toolkit for building component-based evented systems in Node.js. Using the design pattern commonly called the Chain of Command, sequences of tasks are tied together and executed.
+[Pronto.js](https://github.com/technosophos/Pronto.js) is a toolkit for building component-based evented systems in Node.js. Using the design pattern commonly called the Chain of Command, sequences of tasks are tied together and executed.
 
 This project provides commands (individual components) for working with MongoDB.
 
@@ -9,29 +9,30 @@ This project provides commands (individual components) for working with MongoDB.
 Here is an example of adding a series of MongoDB operations to a `route` in `Pronto`:
 
 ```javascript
+mongo = require('pronto-mongodb');
 register.route('test')
   // Open a connection to a MongoDB.
-  .does(Use, 'use').using('dbName', 'prontoTest')
+  .does(mongo.Use, 'use').using('dbName', 'prontoTest')
   
   // Get (or create) a collection called 'narf'.
-  .does(GetCollection, 'narf').using('dbName', 'prontoTest').using('collection', 'narf')
+  .does(mongo.GetCollection, 'narf').using('dbName', 'prontoTest').using('collection', 'narf')
   
   // Insert a document into the collection.
-  .does(Insert, 'doc1').using('collection').from('cxt:narf').using('data', {'doc': 1})
+  .does(mongo.Insert, 'doc1').using('collection').from('cxt:narf').using('data', {'doc': 1})
   
   // Add another document (using save, which is insert-or-update).
-  .does(Save, 'doc2').using('collection').from('cxt:narf').using('data', {'doc': 2})
+  .does(mongo.Save, 'doc2').using('collection').from('cxt:narf').using('data', {'doc': 2})
   
   // Find a single document that matches the specified filter.
-  .does(FindOne, 'looky').using('collection').from('cxt:narf').using('filter', {'doc': 1})
+  .does(mongo.FindOne, 'looky').using('collection').from('cxt:narf').using('filter', {'doc': 1})
   
   // Normally, we would do something useful here.... but we're not going to.
   
   // Drop the entire 'narf' collection.
-  .does(Drop).using('collection', 'narf').using('dbName', 'prontoTest')
+  .does(mongo.Drop).using('collection', 'narf').using('dbName', 'prontoTest')
   
   // Close the database.
-  .does(Close).using('dbName', 'prontoTest')
+  .does(mongo.Close).using('dbName', 'prontoTest')
 ;
 ```
 
