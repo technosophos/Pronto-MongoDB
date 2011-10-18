@@ -1,0 +1,19 @@
+{
+  "name": "pronto-mongodb",
+  "description": "MongoDB Support for Pronto",
+  "keywords": ["mongodb","mongo","pronto"],
+  "version": "0.0.1",
+  "author": "Matt Butcher <technosophos@gmail.com>",
+  "contributors": [
+    {"name": "Matt Butcher", "email": "technosophos@gmail.com"}
+  ],
+  "dependencies": {
+    "pronto": ">= 0.1.0",
+    "mongodb": ">= 0.9.6"
+  },
+  "main": "lib/pronto-mongodb",
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {"node": ">= 0.4.12 < 0.5.0"}
+}
