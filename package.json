@@ -7,6 +7,7 @@
   "contributors": [
     {"name": "Matt Butcher", "email": "technosophos@gmail.com"}
   ],
+  "repository": "https://github.com/technosophos/Pronto-MongoDB",
   "dependencies": {
     "mongodb": ">= 0.9.6"
   },
