@@ -38,6 +38,14 @@ register.route('test')
 
 The above shows how Pronto-MongoDB commands can be used within a Pronto application. The example is simple, but most of the commands have many available parameters, allowing you to construct elaborate applications.
 
+## MongoDB Features
+
+*Q:* How do you decide which Mongo features to implement as commands?
+
+*A:* Those that seem practical (to me) tend to get implemented. If you find a feature of MongoDB that you think should be implemented as a command, please file an issue. I'm happy to build out commands as they are useful.
+
+Sometimes, though, it makes more sense to perform some MongoDB operations within a command. Manipulating cursors often fall into this category. It makes more sense (in most cases) to treat a cursor as a piece of data inside of a command rather than a command of some sort.
+
 ## Acknowledgements
 
 This module is built on the `node-mongodb-native` (aka `mongodb`) driver library, which provides an excellent evented interface.
