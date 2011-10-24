@@ -26,7 +26,6 @@ register
 	.does(common.TriremeClosureCommand, 'tests')
 		.using('fn', function(cxt, params, emitter) {
 			var ds = cxt.getDatasource('prontoTest');
-			console.log(ds);
 			assert.ok(ds);
 			assert.equal(ds.databaseName, 'prontoTest', "Names should be the same.");
 			//assert.equal(ds.state, 'connected', "The database should be connected");
